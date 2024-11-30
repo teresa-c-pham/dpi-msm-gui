@@ -58,6 +58,9 @@ class DirectorsController < ApplicationController
     @director = Director.where({ :id => the_id }).at(0)
 
     @director.name = params.fetch("query_name")
+    @director.image = params.fetch("query_image")
+    @director.dob = params.fetch("query_dob")
+    @director.bio = params.fetch("query_bio")
 
     if @director.valid?
       @director.save

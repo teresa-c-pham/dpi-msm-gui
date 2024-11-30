@@ -8,28 +8,28 @@
 
 <hr>
 
-<form action="/create_director" method="post">
+<form action="/modify_director/<%= @the_director.id %>" method="post">
   <div>
     <label for="director_name">Name</label>
-    <input id="director_name" type="text" name="query_name">
+    <input id="director_name" type="text" name="query_name" value=<%= @the_director.name %>>
   </div>
 
   <div>
     <label for="dob">Dob</label>
-    <input id="dob" type="date" name="query_dob">
+    <input id="dob" type="date" name="query_dob" value=<%= @the_director.dob %>>
   </div>
   
   <div>
     <label for="director_bio">Bio</label>
-    <textarea id="director_bio" rows="3" type="text" name="query_bio"></textarea>
+    <textarea id="director_bio" rows="3" type="text" name="query_bio"><%= @the_director.bio %></textarea>
   </div>
   
   <div>
     <label for="image_field">Image</label>
-    <input id="image_field" type="text" name="query_image">
+    <input id="image_field" type="text" name="query_image" value="<%= @the_director.image %>">
   </div>
 
-  <button>Create director</button>	
+  <button>Update director</button>	
 </form>
 
 <hr>

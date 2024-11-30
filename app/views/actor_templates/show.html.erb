@@ -8,6 +8,32 @@
 
 <hr>
 
+<form action="/modify_actor/<%= @the_actor.id %>" method="post">
+  <div>
+    <label for="actor_name">Name</label>
+    <input id="actor_name" type="text" name="query_name" value=<%= @the_actor.name %>>
+  </div>
+
+  <div>
+    <label for="dob">Dob</label>
+    <input id="dob" type="date" name="query_dob" value=<%= @the_actor.dob %>>
+  </div>
+  
+  <div>
+    <label for="actor_bio">Bio</label>
+    <textarea id="actor_bio" rows="3" type="text" name="query_bio"><%= @the_actor.bio %></textarea>
+  </div>
+  
+  <div>
+    <label for="image_field">Image</label>
+    <input id="image_field" type="text" name="query_image" value="<%= @the_actor.image %>">
+  </div>
+
+  <button>Update actor</button>	
+</form>
+
+<hr>
+
 <dl>
   <dt>
     Name
