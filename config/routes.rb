@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   post("/create_director", { :controller => "directors", :action => "create" })
   post("/modify_director/:path_id", { :controller => "directors", :action => "update" })
-  post("/delete_director/:path_id", { :controller => "directors", :action => "delete_this" })
+  get("/delete_director/:path_id", { :controller => "directors", :action => "delete_this" })
 
   # Movies GET and POST methods
   get("/movies", { :controller => "movies", :action => "index" })
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   post("/create_movie", { :controller => "movies", :action => "create" })
   post("/modify_movie/:path_id", { :controller => "movies", :action => "update" })
-  post("/delete_movie/:path_id", { :controller => "movies", :action => "delete_this" })
+  get("/delete_movie/:path_id", { :controller => "movies", :action => "delete_this" })
 
   # Actors GET and POST methods
   get("/actors", { :controller => "actors", :action => "index" })
@@ -25,5 +25,5 @@ Rails.application.routes.draw do
 
   post("/create_actor", { :controller => "actors", :action => "create" })
   post("/modify_actor/:path_id", { :controller => "actors", :action => "update" })
-  post("/delete_actor/:path_id", { :controller => "actors", :action => "delete_this" })
+  get("/delete_actor/:path_id", { :controller => "actors", :action => "delete_this" })
 end
