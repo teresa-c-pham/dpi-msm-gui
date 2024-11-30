@@ -3,6 +3,35 @@
 </h1>
 
 <hr>
+<form action="/create_movie" method="post">
+  <div>
+    <label for="movie_title">Title</label>
+    <input id="movie_title" type="text" name="query_title">
+  </div>
+  <div>
+    <label for="year">Year</label>
+    <input id="year" type="number" name="query_year">
+  </div>
+  <div>
+    <label for="movie_duration">Duration</label>
+    <input id="movie_duration" type="number" name="query_duration">
+  </div>
+  <div>
+    <label for="movie_description">Description</label>
+    <textarea id="movie_description" rows="3" type="text" name="query_description"></textarea>
+  </div>
+  <div>
+    <label for="image_field">Image</label>
+    <input id="image_field" type="text" name="query_image">
+  </div>
+  <div>
+    <label for="director_id">Director ID</label>
+    <input id="director_id" type="number" name="query_director_id">
+  </div>
+  <button>Create movie</button>	
+</form>
+
+<hr>
 
 <table border="1">
   <tr>
